@@ -86,6 +86,7 @@ main .result,.choices, .move {
     font-family: Asap, sans-serif;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 .move {
     font-family: Asap, sans-serif;
