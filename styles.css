@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #17223b;
+    background-image: url(/images/background.png) ;
+    color: white;
+}
+header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vmin;
+}
+header h1 {
+    color: #252631;
+    font-family: Asap, sans-serif;
+}
+main .result,.choices, .move {
+    display: flex;
+    justify-content: center;
+    margin: 5rem auto;
+}
+.score-board {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 2rem;
+}
+.score-board-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr .5fr;
+    grid-template-rows: 1fr;
+    border: 3px solid white;
+    border-radius: 10px ;
+    width: 40Rem;
+    overflow: hidden;
+}
+.badge-comp {
+    grid-column-start: 3;
+}
+.badge-comp, .badge-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scores {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    justify-self: center;
+}
+.badge-comp, .badge-user {
+    background: #e2584f;
+    font-size: 1.5rem;
+    padding: .5rem 1rem; 
+    font-family: Asap, sans-serif;
+}
+.user-score, .comp-score, .divisor {
+    font-family: Asap, sans-serif;
+    font-size: 46px;
+}
+/* .choices  img{
+    border: 3px solid white;
+    border-radius: 100%;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+} */
+.choice-rock, .choice-paper, .choice-scissor {
+    border: 4px solid white;
+    border-radius: 100px;
+    margin: 0 2rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.choice-rock:hover, .choice-paper:hover, .choice-scissor:hover {
+    background-color: #e2584f;
+    cursor: pointer;
+}
+
+.result-text {
+    font-family: Asap, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.move {
+    font-family: Asap, sans-serif;
+    font-size: 1.5rem;
+}
+
+.spikes {
+    position: relative;
+    background: #2c3e50;
+    height: 0vh;
+  }
+  
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-position: 0 0;
+  }
+
+  .green-glow {
+      border:  4px solid #4dcc7d;
+      box-shadow: 0 0 50px #31b43a;
+  }
+  .red-glow {
+      border:  4px solid #fc121b;
+      box-shadow: 0 0 50px #d01115;
+  }
+  .gray-glow {
+      border:  4px solid #464647;
+      box-shadow: 0 0 50px #25292b;
+  }
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 80px;
+    }
+    .score-board-container {
+        width: 20rem;
+    }
+    .choice-rock, .choice-paper, .choice-scissor {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 50px;
+        
+    }
+    header, h1 {
+        font-size: 25px ;
+    }
+    .score-board-container {
+        width: 16rem;
+    }
+    .result-text {
+        font-size: 1.4rem ;
+    }
+    .choices img {
+        width: 70px;
+    }
+    .move {
+        font-size: 0;
+    }
+    .user-score, .comp-score, .divisor {
+        font-size: 35px ;
+    }
+    main .score-board, .result, .choices, .move {
+        margin: 3rem auto;
+    }
+    .spikes::after {
+        z-index: 0;
+        height: 0;
+        background-size:0;
+}
